@@ -3,6 +3,7 @@
 Function to divide minority class instances into four categories: Safe, Border, Rare, and Outlier.
 
 Input: Data (Pandas DataFrame object)
+
 Output: An array displaying all the minority class sampled categorized into four categories. 
 
 Proposed in the following article -
