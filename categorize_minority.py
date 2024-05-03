@@ -11,7 +11,7 @@ import pandas as pd
 
 #data=pd.read_csv(dataname)
 
-def categorize_minority_class(data, n_neighbors=5):
+def categorize_minority_class(data, n_neighbors=6):
     
     
     X = data.drop(data.columns[-1],axis=1)
@@ -24,13 +24,13 @@ def categorize_minority_class(data, n_neighbors=5):
     minority_indices = np.where(y == 1)[0]
     distances, indices = knn.kneighbors(X.iloc[minority_indices,:])
     
-    ysum= n_neighbors - np.sum(ynp[indices], axis=1)
+    ysum=  np.sum(ynp[indices]==0, axis=1)
     
     out=[]
     for i in ysum:
         if i <2:
             out.append('s')
-        elif i==2 | i==3:
+        elif i==2 or i==3:
             out.append('b')
         elif i==4:
             out.append('r')
