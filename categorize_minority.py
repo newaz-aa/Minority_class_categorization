@@ -18,7 +18,7 @@ def categorize_minority_class(data, n_neighbors=6):
     y = data[data.columns[-1]]
     ynp= np.array(y)
     
-    knn = NearestNeighbors(n_neighbors=5)
+    knn = NearestNeighbors(n_neighbors=n_neighbors)
     knn.fit(X)
     
     minority_indices = np.where(y == 1)[0]
