@@ -12,8 +12,8 @@ This project uses the following libraries:
 [![NumPy](https://img.shields.io/badge/NumPy-1.26.0-blue?logo=numpy)](https://numpy.org/)
 
 ## Materials
-* categorize_minority.py file contains the function to divide minority class instances into four categories: Safe, Border, Rare, and Outlier (depending on nearest neighbor rule)
-* Minority-class instance categorization.ipynb file shows the use cases of the function on two datasets.
+* categorize_minority.py => this file contains the function to divide minority class instances into four categories: Safe, Border, Rare, and Outlier (depending on nearest neighbor rule)
+* Minority-class instance categorization.ipynb => this file shows the use cases of the function on two datasets.
 
 
 
@@ -22,7 +22,7 @@ This project uses the following libraries:
 ## categorize_minority.py
 
 
-```bash
+```
   Input: Data (Pandas DataFrame object)
   Output: An array showing the category of the minority class instances and the count.
 
