@@ -4,12 +4,12 @@ Created on Wed May  1 01:52:45 2024
 
 @author: asifn
 """
+# This function divides minority class instances into four categories: Safe, Border, Rare, and Outlier.
 
 from sklearn.neighbors import NearestNeighbors
 import numpy as np
 import pandas as pd
 
-#data=pd.read_csv(dataname)
 
 def categorize_minority_class(data, n_neighbors=6):
     
@@ -34,6 +34,12 @@ def categorize_minority_class(data, n_neighbors=6):
             out.append('b')
         elif i==4:
             out.append('r')
-        elif i==5:
+        elif i>4:
             out.append('o')
-    return out
+            
+    num_count= {'Safe': out.count('s'),
+                'Border': out.count('b'),
+                'Rare': out.count('r'),
+                'Outlier': out.count('o')
+               }
+    return out, num_count
