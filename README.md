@@ -1,7 +1,7 @@
 
 # Minority-class Instance categorization
 
-This repository contains the codes to classify minority class instances into certain categories depending on their complexity level. Details are discussed in the paper.
+This repository contains the codes to classify minority class instances into certain categories depending on their complexity level.
 
 ## Dependencies
 
@@ -12,9 +12,9 @@ This project uses the following libraries:
 [![NumPy](https://img.shields.io/badge/NumPy-1.26.0-blue?logo=numpy)](https://numpy.org/)
 
 ## Materials
-* categorize_minority.py => this file contains the function to divide minority class instances into four categories: Safe, Border, Rare, and Outlier (depending on nearest neighbor rule)
-* Minority-class instance categorization.ipynb => this file shows the use cases of the function on two datasets.
-
+* categorize_minority_v2.py => updated version
+* categorize_minority.py => this file contains the function to divide minority class instances into four categories: Safe, Border, Rare, and Outlier (depending on the nearest neighbor rule)
+* Minority-class instance categorization.ipynb => This file shows the use cases of the function on two datasets.
 
 
 
